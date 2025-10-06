@@ -13,4 +13,4 @@ if color1==color2:
     color_name = get_color_name(color1)
     print(color_name)
 else:
-    print("NO")
+    print("NO") 
