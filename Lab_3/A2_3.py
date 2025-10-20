@@ -1,6 +1,6 @@
 import string
 allowed = string.ascii_uppercase + string.ascii_lowercase + string.digits + '*-#'
-symbols = '*#-' 
+symbols = '*#-'
 password = input("Enter password: ")
 has_errors = False
 if len(password) != 8:
@@ -20,6 +20,6 @@ if not any(symbol in symbols for symbol in password):
     has_errors = True
 if not all(symbol in allowed for symbol in password):
     print("В пароле используются непредусмотренные символы!")
-    has_errors = True
+    has_errors = True 
 if not has_errors:
     print("Надёжный пароль!")
