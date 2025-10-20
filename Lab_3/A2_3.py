@@ -1,6 +1,6 @@
 import string
 allowed = string.ascii_uppercase + string.ascii_lowercase + string.digits + '*-#'
-symbols = '*#-'
+symbols = '*#-' 
 password = input("Enter password: ")
 has_errors = False
 if len(password) != 8:

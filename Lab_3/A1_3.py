@@ -24,4 +24,4 @@ else:
 if region1==region2:
     print(f"Yes, { region1 }")
 else:
-        print("No") 
+        print("No")
