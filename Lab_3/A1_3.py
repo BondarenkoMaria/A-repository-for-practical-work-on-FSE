@@ -4,7 +4,7 @@ x2=int(input())
 y2=int(input())
 if x1==0 or y1==0 or x2==0 or y2==0:
 	print ("Ошибка")
-else: 
+else:
 	if (x1>0 and y1>0): 
 		region1=("1 четверть")
 	elif (x1<0 and y1>0):
@@ -24,4 +24,4 @@ else:
 if region1==region2:
     print(f"Yes, { region1 }")
 else:
-        print("No")
+        print("No") 
