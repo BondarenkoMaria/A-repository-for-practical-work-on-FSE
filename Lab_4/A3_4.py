@@ -26,23 +26,23 @@ def analyze_packet_loss():
 
     loss_percentage = (lost_packets / total_packets) * 100
 
-    if loss_percentage <= 1:
-        quality = "Отличное качество"
-    elif loss_percentage <= 5:
-        quality = "Хорошее качество"
-    elif loss_percentage <= 10:
-        quality = "Удовлетворительное качество"
-    elif loss_percentage <= 20:
-        quality = "Плохое качество"
-    else:
-        quality = "Критическое состояние сети"
+
 
     print(f"Общее количество пакетов: {total_packets}")
     print(f"Количество потерянных пакетов: {lost_packets}")
     print(f"Длина самой длинной последовательности потерянных пакетов: {max_loss_streak}")
     print(f"Процент потерь: {loss_percentage:.1f}%")
-    print(f"Качество связи: {quality}")
-
+    print(f"Качество связи: ", end=" ")
+    if loss_percentage <= 1:
+        print("Отличное качество")
+    elif loss_percentage <= 5:
+        print("Хорошее качество")
+    elif loss_percentage <= 10:
+        print("Удовлетворительное качество")
+    elif loss_percentage <= 20:
+        print("Плохое качество")
+    else:
+        print("Критическое состояние сети") 
 
 if __name__ == "__main__":
     analyze_packet_loss()
