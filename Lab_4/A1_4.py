@@ -1,6 +1,6 @@
 import random
 import time
- 
+
 n = int(input("Введите количество примеров: "))
 
 correct_count = 0
@@ -11,7 +11,7 @@ for i in range(1, n + 1):
 
     a = random.randint(2, 9)
     b = random.randint(2, 9)
-    correct_answer = a * b
+    correct_answer = a * b 
 
     while True:
         start_time = time.time()
