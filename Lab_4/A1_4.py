@@ -1,6 +1,6 @@
 import random
 import time
-
+ 
 n = int(input("Введите количество примеров: "))
 
 correct_count = 0
