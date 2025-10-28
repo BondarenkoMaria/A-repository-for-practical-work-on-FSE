@@ -9,7 +9,7 @@ def getChecksum(string):
             checkSum = checkSum + int(string[i])*2
     for i in reversed(range(1, len(string)+1, 2)):
         checkSum += int(string[i])
-    return checkSum 
+    return checkSum
 def getCardType(string):
     if len(string) == 13 or len(string) == 16 and string.startswith("4"):
         return "Visa"
@@ -17,7 +17,7 @@ def getCardType(string):
         return "American Express"
     if len(string) == 16 and re.match(r'5[1-5]', string[:2]):
         return "MasterCard"
-    return "Invalid"
+    return "Invalid" 
 cardNumber = (input("Введите номер бфнковской карты: "))
 if isValidNumber(cardNumber):
     if getChecksum(cardNumber) % 10 == 0:
