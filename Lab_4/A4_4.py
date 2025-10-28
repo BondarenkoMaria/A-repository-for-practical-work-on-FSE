@@ -17,10 +17,10 @@ def getCardType(string):
         return "American Express"
     if len(string) == 16 and re.match(r'5[1-5]', string[:2]):
         return "MasterCard"
-    return "Invalid" 
+    return "Invalid"
 cardNumber = (input("Введите номер бфнковской карты: "))
 if isValidNumber(cardNumber):
     if getChecksum(cardNumber) % 10 == 0:
         print(getCardType(cardNumber))
     else:
-        print("Invalid")
+        print("Invalid") 
