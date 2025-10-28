@@ -42,7 +42,7 @@ def analyze_packet_loss():
     elif loss_percentage <= 20:
         print("Плохое качество")
     else:
-        print("Критическое состояние сети") 
+        print("Критическое состояние сети")
 
 if __name__ == "__main__":
     analyze_packet_loss()

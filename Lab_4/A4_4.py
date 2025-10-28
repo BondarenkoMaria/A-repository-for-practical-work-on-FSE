@@ -1,5 +1,5 @@
 def isValidNumber(string):
-    return string.isdigit() and len(string) in [13, 15, 16]
+    return string.isdigit() and len(string) in [13, 15, 16] 
 def getChecksum(string):
     checkSum = 0
     for i in reversed(range(0, len(string)-1, 2)):
