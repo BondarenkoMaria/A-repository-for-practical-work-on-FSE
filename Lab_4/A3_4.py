@@ -8,7 +8,7 @@ def analyze_packet_loss():
     for char in sequence:
         if char not in '01':
             print("Ошибка: строка должна содержать только символы 0 и 1")
-            return
+            return 
 
     total_packets = len(sequence)
 
