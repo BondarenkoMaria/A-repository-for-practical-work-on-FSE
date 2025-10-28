@@ -1,5 +1,5 @@
 def isValidNumber(string):
-    return string.isdigit() and len(string) in [13, 15, 16] 
+    return string.isdigit() and len(string) in [13, 15, 16]
 def getChecksum(string):
     checkSum = 0
     for i in reversed(range(0, len(string)-1, 2)):
@@ -9,7 +9,7 @@ def getChecksum(string):
             checkSum = checkSum + int(string[i])*2
     for i in reversed(range(1, len(string)+1, 2)):
         checkSum += int(string[i])
-    return checkSum
+    return checkSum 
 def getCardType(string):
     if len(string) == 13 or len(string) == 16 and string.startswith("4"):
         return "Visa"
