@@ -8,10 +8,10 @@ print( )
 for i in range(n):
     for j in range(m):
         print("#", end="")
-    print() 
+    print()
 
 print("\n")
-print("РАМКА {}x{}:".format(n, m))
+print(f"РАМКА {n}x{m}")
 print( )
 
 for i in range(n):
@@ -20,7 +20,7 @@ for i in range(n):
             print("#", end="")
         else:
             print(" ", end="")
-    print()
+    print() 
 
 print("\n")
 print("ПРАВЫЙ ТРЕУГОЛЬНИК ({} строк):".format(n))
