@@ -1,14 +1,14 @@
 n = int(input("Введите количество строк n: "))
-m = int(input("Введите количество столбцов m: ")) 
+m = int(input("Введите количество столбцов m: "))
 
 print("\n")
-print("ПРЯМОУГОЛЬНИК {}x{}:".format(n, m))
+print(f"ПРЯМОУГОЛЬНИК {n}x{m}")
 print( )
 
 for i in range(n):
     for j in range(m):
         print("#", end="")
-    print()
+    print() 
 
 print("\n")
 print("РАМКА {}x{}:".format(n, m))
