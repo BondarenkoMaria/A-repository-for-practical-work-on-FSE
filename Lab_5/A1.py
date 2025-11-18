@@ -2,7 +2,7 @@ text = 'Падал (куда он там падал) прошлогодний (�
 
 while '(' in text and ')' in text:
     left = text.rfind('(')
-    right = text.find(')', left)
+    right = text.find(')', left) 
 
     if right != -1:
         if left > 0 and text[left - 1] == ' ':
@@ -12,3 +12,4 @@ while '(' in text and ')' in text:
 
 text = ' '.join(text.split())
 print(text)
+
