@@ -44,14 +44,14 @@ def load_workouts_data():
 
 
 def get_stats(users, workouts): 
-    if not workouts:
-        return {
-            'total_workouts': 0,
-            'total_users': 0,
-            'total_calories': 0,
-            'total_hours': 0,
-            'total_distance': 0
-        }
+    if not workouts: 
+        return { 
+            'total_workouts': 0, 
+            'total_users': 0, 
+            'total_calories': 0, 
+            'total_hours': 0, 
+            'total_distance': 0 
+        } 
 
     total_workouts = len(workouts)
     total_users = len(set([w['user_id'] for w in workouts]))
@@ -101,6 +101,7 @@ if __name__ == '__main__':
 #             #print(count)
 #     print(f"Сожжено калорий: {total_calories}")
 #     return total_calories, total_distance, total_time
+
 
 
 
