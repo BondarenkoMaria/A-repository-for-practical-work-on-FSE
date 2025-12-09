@@ -43,7 +43,7 @@ def load_workouts_data():
         return [] 
 
 
-def get_stats(users, workouts):
+def get_stats(users, workouts): 
     if not workouts:
         return {
             'total_workouts': 0,
@@ -101,6 +101,7 @@ if __name__ == '__main__':
 #             #print(count)
 #     print(f"Сожжено калорий: {total_calories}")
 #     return total_calories, total_distance, total_time
+
 
 
 
