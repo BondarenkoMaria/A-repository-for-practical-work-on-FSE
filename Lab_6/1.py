@@ -69,38 +69,19 @@ def get_stats(users, workouts):
     } 
 
 
-if __name__ == '__main__':
-    users = load_users_data()
-    workouts = load_workouts_data()
+if __name__ == '__main__': 
+    users = load_users_data() 
+    workouts = load_workouts_data() 
 
-    stats = get_stats(users, workouts)
+    stats = get_stats(users, workouts) 
 
-    print("ОБЩАЯ СТАТИСТИКА")
-    print("===========")
-    print(f"Всего тренировок: {stats['total_workouts']}")
-    print(f"Всего пользователей: {stats['total_users']}")
-    print(f"Сожжено калорий: {stats['total_calories']}")
-    print(f"Общее время: {stats['total_hours']} часов")
-    print(f"Пройдено дистанции: {stats['total_distance']} км")
-
-
-# def get_stats(users, workouts):
-#     total_calories = sum(workout['calories'] for workout in workouts)  #каллории
-#     total_distance = sum(workout['distance'] for workout in workouts)  #дистанция
-#     total_time = (sum(workout['duration'] for workout in workouts))/60  #все время
-#
-#     for workout in workouts:
-#         work = 0
-#         if workout['duration'] in workouts:
-#             work += 1  #кол-во тренировок
-#
-#     for user in users:
-#         count = 0
-#         if user['user_id'] in users:
-#             count += 1 #кол-во людей
-#             #print(count)
-#     print(f"Сожжено калорий: {total_calories}")
-#     return total_calories, total_distance, total_time
+    print("ОБЩАЯ СТАТИСТИКА") 
+    print("===========") 
+    print(f"Всего тренировок: {stats['total_workouts']}") 
+    print(f"Всего пользователей: {stats['total_users']}")  
+    print(f"Сожжено калорий: {stats['total_calories']}") 
+    print(f"Общее время: {stats['total_hours']} часов") 
+    print(f"Пройдено дистанции: {stats['total_distance']} км") 
 
 
 
