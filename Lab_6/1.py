@@ -53,12 +53,12 @@ def get_stats(users, workouts):
             'total_distance': 0 
         } 
 
-    total_workouts = len(workouts)
-    total_users = len(set([w['user_id'] for w in workouts]))
-    total_calories = sum(w['calories'] for w in workouts)
-    total_minutes = sum(w['duration'] for w in workouts)
-    total_hours = round(total_minutes / 60, 1)
-    total_distance = round(sum(w['distance'] for w in workouts), 1)
+    total_workouts = len(workouts) 
+    total_users = len(set([w['user_id'] for w in workouts])) 
+    total_calories = sum(w['calories'] for w in workouts) 
+    total_minutes = sum(w['duration'] for w in workouts) 
+    total_hours = round(total_minutes / 60, 1) 
+    total_distance = round(sum(w['distance'] for w in workouts), 1) 
 
     return {
         'total_workouts': total_workouts,
@@ -101,6 +101,7 @@ if __name__ == '__main__':
 #             #print(count)
 #     print(f"Сожжено калорий: {total_calories}")
 #     return total_calories, total_distance, total_time
+
 
 
 
