@@ -20,27 +20,27 @@ def load_users_data():
         return [] 
 
 
-def load_workouts_data():
-    try:
-        workouts_tree = ET.parse('workouts.xml')
-        workouts = []
-        for workout_element in workouts_tree.getroot().findall('workout'):
-            workout = {
-                'workout_id': int(workout_element.find('workout_id').text),
-                'user_id': int(workout_element.find('user_id').text),
-                'date': workout_element.find('date').text,
-                'type': workout_element.find('type').text,
-                'duration': int(workout_element.find('duration').text),
-                'distance': float(workout_element.find('distance').text),
-                'calories': int(workout_element.find('calories').text),
-                'avg_heart_rate': int(workout_element.find('avg_heart_rate').text),
-                'intensity': workout_element.find('intensity').text
-            }
-            workouts.append(workout)
-        return workouts
-    except FileNotFoundError:
-        print("Файл не найден")
-        return []
+def load_workouts_data(): 
+    try: 
+        workouts_tree = ET.parse('workouts.xml') 
+        workouts = [] 
+        for workout_element in workouts_tree.getroot().findall('workout'): 
+            workout = { 
+                'workout_id': int(workout_element.find('workout_id').text), 
+                'user_id': int(workout_element.find('user_id').text), 
+                'date': workout_element.find('date').text, 
+                'type': workout_element.find('type').text, 
+                'duration': int(workout_element.find('duration').text), 
+                'distance': float(workout_element.find('distance').text), 
+                'calories': int(workout_element.find('calories').text), 
+                'avg_heart_rate': int(workout_element.find('avg_heart_rate').text), 
+                'intensity': workout_element.find('intensity').text 
+            } 
+            workouts.append(workout) 
+        return workouts 
+    except FileNotFoundError: 
+        print("Файл не найден") 
+        return [] 
 
 
 def get_stats(users, workouts):
@@ -101,5 +101,6 @@ if __name__ == '__main__':
 #             #print(count)
 #     print(f"Сожжено калорий: {total_calories}")
 #     return total_calories, total_distance, total_time
+
 
 
