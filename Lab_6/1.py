@@ -1,23 +1,23 @@
 import xml.etree.ElementTree as ET 
 
-def load_users_data():
-    try:
-        users_tree = ET.parse('users.xml')
-        users = []
-        for user_elem in users_tree.getroot().findall('user'):
-            user = {
-                'user_id': int(user_elem.find('user_id').text),
-                'name': user_elem.find('name').text,
-                'age': int(user_elem.find('age').text),
-                'weight': int(user_elem.find('weight').text),
-                #'fitness_lvl': user_elem.find('fitness_lvl').text,
-                'workouts': []
-            }
-            users.append(user)
-        return users
-    except FileNotFoundError:
-        print("Файл не найден")
-        return []
+def load_users_data(): 
+    try: 
+        users_tree = ET.parse('users.xml') 
+        users = [] 
+        for user_elem in users_tree.getroot().findall('user'): 
+            user = { 
+                'user_id': int(user_elem.find('user_id').text), 
+                'name': user_elem.find('name').text, 
+                'age': int(user_elem.find('age').text), 
+                'weight': int(user_elem.find('weight').text), 
+                #'fitness_lvl': user_elem.find('fitness_lvl').text, 
+                'workouts': [] 
+            } 
+            users.append(user) 
+        return users 
+    except FileNotFoundError: 
+        print("Файл не найден") 
+        return [] 
 
 
 def load_workouts_data():
@@ -101,4 +101,5 @@ if __name__ == '__main__':
 #             #print(count)
 #     print(f"Сожжено калорий: {total_calories}")
 #     return total_calories, total_distance, total_time
+
 
